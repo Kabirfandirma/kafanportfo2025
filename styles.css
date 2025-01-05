@@ -1,136 +1,128 @@
-/* General Styles */
-body {
-  font-family: 'Arial', sans-serif;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
   color: #333;
-  line-height: 1.6;
+  background-image: url('images/background.jpg'); /* Ensure background image file is in the images folder */
+  background-size: cover;
+  background-position: center;
 }
 
 .container {
   width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 header {
-  background: #333;
-  color: #fff;
-  padding: 1rem 0;
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
 }
 
 header h1 {
-  margin: 0;
+  font-size: 2.5rem;
   text-align: center;
 }
 
-header nav ul {
+nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
   list-style: none;
-  padding: 0;
 }
 
-header nav ul li {
-  margin: 0 15px;
+nav ul li {
+  margin-right: 20px;
 }
 
-header nav ul li a {
-  color: #fff;
+nav ul li a {
+  color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
 }
 
 #hero {
-  background: url('kafanceo2.jpg') no-repeat center center/cover;
-  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional, to darken the hero section */
+  color: white;
+  padding: 60px 0;
   text-align: center;
-  padding: 100px 20px;
 }
 
-#hero .btn {
-  background: #ff6600;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
+#hero h2 {
+  font-size: 3rem;
 }
 
-#portfolio {
-  padding: 50px 0;
+#portfolio, #about, #contact {
+  padding: 60px 0;
 }
 
-#portfolio h2 {
-  text-align: center;
+#portfolio .gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#portfolio .gallery-item {
+  width: 45%;
   margin-bottom: 20px;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.gallery-item img {
+#portfolio img {
   width: 100%;
+  height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-#about, #contact {
-  padding: 50px 0;
-  background: #f4f4f4;
-}
-
-#about h2, #contact h2 {
-  text-align: center;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 10px;
 }
 
 .social-icons a {
+  font-size: 1.5rem;
   color: #333;
-  font-size: 20px;
-  text-decoration: none;
+  margin: 0 10px;
 }
 
 footer {
-  background: #333;
-  color: #fff;
+  background-color: #333;
+  color: white;
   text-align: center;
-  padding: 10px 0;
-}
-
-/* Mobile Navigation Styles */
-.nav-toggle {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #fff;
+  padding: 20px 0;
 }
 
 @media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+  
   nav ul {
     display: none;
     flex-direction: column;
-    background: #333;
-    padding: 10px;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    border-radius: 5px;
+    align-items: center;
+    margin-top: 20px;
   }
 
-  nav ul.active {
+  nav ul li {
+    margin-bottom: 15px;
+  }
+
+  nav ul li a {
+    font-size: 1.5rem;
+  }
+
+  .nav-list.active {
     display: flex;
-  }
-
-  .nav-toggle {
-    display: block;
   }
 }
