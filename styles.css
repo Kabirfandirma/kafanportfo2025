@@ -24,7 +24,7 @@ body {
     text-align: center;
   }
   
-  header nav ul {
+  .nav-list {
     display: flex;
     justify-content: center;
     list-style: none;
