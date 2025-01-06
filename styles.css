@@ -35,7 +35,7 @@ body {
     margin: 0 15px;
   }
   
-  header nav ul li a {
+  .nav-list nav ul li a {
       position: relative;
       text-transform: uppercase;
     color: #fff;
