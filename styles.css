@@ -24,43 +24,24 @@ body {
     text-align: center;
   }
   
-/*  .nav-toggle ul {
+header ul {
     display: flex;
     justify-content: center;
     list-style: none;
     padding: 0;
   }
   
-  .nav-toggle nav ul li {
+  header ul li {
     margin: 0 15px;
   }
   
-  .nav-toggle nav ul li a {
-      position: relative;
-      text-transform: uppercase;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-  }*/
- .nav-toggle {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-  }
-  
-  .nav-toggle {
-    margin: 0 15px;
-  }
-  
-  .nav-toggle {
+  header ul li a {
       position: relative;
       text-transform: uppercase;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
   }
-  
 
   #hero {
     background: url('images/kafanceo2.jpg') no-repeat center center/cover;
