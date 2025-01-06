@@ -24,7 +24,7 @@ body {
     text-align: center;
   }
   
-  .nav-toggle ul {
+/*  .nav-toggle ul {
     display: flex;
     justify-content: center;
     list-style: none;
@@ -41,8 +41,27 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+  }*/
+ .nav-toggle {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
   }
   
+  .nav-toggle {
+    margin: 0 15px;
+  }
+  
+  .nav-toggle {
+      position: relative;
+      text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+
   #hero {
     background: url('images/kafanceo2.jpg') no-repeat center center/cover;
     color: #ffffff;
