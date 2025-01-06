@@ -24,14 +24,14 @@ body {
     text-align: center;
   }
   
-  .nav-list {
+  .nav-list ul {
     display: flex;
     justify-content: center;
     list-style: none;
     padding: 0;
   }
   
-  header nav ul li {
+  .nav-list nav ul li {
     margin: 0 15px;
   }
   
