@@ -44,16 +44,32 @@
   <section id="portfolio">
     <div class="container py-5">
       <h2 class="text-center">Our Portfolio</h2>
-      <div class="row g-3 mt-4">
-        <div class="col-md-3"><img src="images/sardalast.png" class="img-fluid rounded" alt="Design 1"></div>
-        <div class="col-md-3"><img src="images/fiareceipt.png" class="img-fluid rounded" alt="Design 2"></div>
-        <div class="col-md-3"><img src="images/housse.png" class="img-fluid rounded" alt="Design 3"></div>
-        <div class="col-md-3"><img src="images/ZILLION.png" class="img-fluid rounded" alt="Design 4"></div>
-        <div class="col-md-3"><img src="images/FIA ACADEMYFORM.png" class="img-fluid rounded" alt="Design 5"></div>
-        <div class="col-md-3"><img src="images/YABANYALOGO.png" class="img-fluid rounded" alt="Design 6"></div>
-        <div class="col-md-3"><img src="images/kidaiv.png" class="img-fluid rounded" alt="Design 7"></div>
-        <div class="col-md-3"><img src="images/formschool.png" class="img-fluid rounded" alt="Design 8"></div>
-          <div class="col-md-3"><img src="images/COACH GLORY2.png" class="img-fluid rounded" alt="Design 9"></div>
+      <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/sardalast.png" class="d-block w-100 img-fluid" alt="Design 1">
+          </div>
+          <div class="carousel-item">
+            <img src="images/fiareceipt.png" class="d-block w-100 img-fluid" alt="Design 2">
+          </div>
+          <div class="carousel-item">
+            <img src="images/housse.png" class="d-block w-100 img-fluid" alt="Design 3">
+          </div>
+          <div class="carousel-item">
+            <img src="images/ZILLION.png" class="d-block w-100 img-fluid" alt="Design 4">
+          </div>
+          <div class="carousel-item">
+            <img src="images/FIA ACADEMYFORM.png" class="d-block w-100 img-fluid" alt="Design 5">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
   </section>
