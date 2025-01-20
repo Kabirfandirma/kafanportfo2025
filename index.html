@@ -13,6 +13,48 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
   <link rel="stylesheet" href="styles.css">
+
+  <!-- AOS (Animate On Scroll) Library for Scroll Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+  <style>
+    /* Hover effects for portfolio images */
+    .portfolio-img {
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .portfolio-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Hero text animation */
+    .hero-text {
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* Sticky navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    /* Progress bars */
+    .progress-bar {
+      background-color: #f7b731;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -35,43 +77,61 @@
 
   <section id="hero" class="text-center text-white d-flex align-items-center justify-content-center bg-dark" style="height: 100vh;">
     <div class="container">
-      <h2>Welcome to Kafan Digitals</h2>
-      <p>High-quality graphic design solutions for all your needs.</p>
+      <h2 class="hero-text">Welcome to Kafan Digitals</h2>
+      <p class="hero-text">High-quality graphic design solutions for all your needs.</p>
       <a href="#portfolio" class="btn btn-warning btn-lg">View Our Work</a>
     </div>
   </section>
 
-  <section id="portfolio">
-    <div class="container py-5">
+  <section id="portfolio" class="py-5">
+    <div class="container">
       <h2 class="text-center">Our Portfolio</h2>
       <div class="row">
         <!-- Portfolio Images -->
-        <div class="col-md-4 mb-4">
-          <img src="images/sardalast.png" class="img-fluid" alt="Design 1">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
+          <div class="card">
+            <img src="images/sardalast.png" class="card-img-top portfolio-img" alt="Design 1">
+          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <img src="images/fiareceipt.png" class="img-fluid" alt="Design 2">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1200">
+          <div class="card">
+            <img src="images/fiareceipt.png" class="card-img-top portfolio-img" alt="Design 2">
+          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <img src="images/housse.png" class="img-fluid" alt="Design 3">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1400">
+          <div class="card">
+            <img src="images/housse.png" class="card-img-top portfolio-img" alt="Design 3">
+          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <img src="images/ZILLION.png" class="img-fluid" alt="Design 4">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1600">
+          <div class="card">
+            <img src="images/ZILLION.png" class="card-img-top portfolio-img" alt="Design 4">
+          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <img src="images/FIA ACADEMYFORM.png" class="img-fluid" alt="Design 5">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1800">
+          <div class="card">
+            <img src="images/FIA ACADEMYFORM.png" class="card-img-top portfolio-img" alt="Design 5">
+          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <img src="images/YABANYALOGO.png" class="img-fluid" alt="Design 6">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="2000">
+          <div class="card">
+            <img src="images/YABANYALOGO.png" class="card-img-top portfolio-img" alt="Design 6">
+          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <img src="images/kidaiv.png" class="img-fluid" alt="Design 7">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="2200">
+          <div class="card">
+            <img src="images/kidaiv.png" class="card-img-top portfolio-img" alt="Design 7">
+          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <img src="images/formschool.png" class="img-fluid" alt="Design 8">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="2400">
+          <div class="card">
+            <img src="images/formschool.png" class="card-img-top portfolio-img" alt="Design 8">
+          </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <img src="images/COACH GLORY2.png" class="img-fluid" alt="Design 9">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="2600">
+          <div class="card">
+            <img src="images/COACH GLORY2.png" class="card-img-top portfolio-img" alt="Design 9">
+          </div>
         </div>
       </div>
     </div>
@@ -84,6 +144,21 @@
         At Kafan Digitals, we specialize in graphic design, including business flyers, logos, wedding invitations, POS flyers, school forms, and book covers. 
         Our designs are tailored to meet your needs and make a lasting impression.
       </p>
+      <!-- Progress bars -->
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <h5>Experience</h5>
+          <div class="progress">
+            <div class="progress-bar" style="width: 80%;">80%</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h5>Projects Completed</h5>
+          <div class="progress">
+            <div class="progress-bar" style="width: 95%;">95%</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -108,5 +183,12 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS (Animate On Scroll) Library -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Initialize AOS -->
+  <script>
+    AOS.init();
+  </script>
 </body>
-</html>
+  </html>
