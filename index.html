@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +17,7 @@
 
   <!-- AOS (Animate On Scroll) Library for Scroll Animations -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  
+
   <style>
     /* Hover effects for portfolio images */
     .portfolio-img {
@@ -39,8 +40,13 @@
     }
 
     @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
 
     /* Sticky navbar */
@@ -54,14 +60,20 @@
     .progress-bar {
       background-color: #f7b731;
     }
+
+    .progress-bar-striped {
+      background-image: linear-gradient(45deg, #f7b731 25%, #f7b731 50%, #f7b731 75%, #f7b731);
+    }
   </style>
 </head>
+
 <body onload="displayPopup()">
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
       <div class="container">
         <a class="navbar-brand" href="#">Kafan Digitals</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -75,83 +87,84 @@
     </nav>
   </header>
 
-  <section id="hero" class="text-center text-white d-flex align-items-center justify-content-center bg-dark" style="height: 100vh;">
+  <section id="hero" class="text-center text-white d-flex align-items-center justify-content-center bg-dark"
+    style="height: 100vh;">
     <div class="container">
-      <h2 class="hero-text">Welcome to Kafan Digitals</h2>
-      <p class="hero-text">High-quality graphic design solutions for all your needs.</p>
-      <a href="#portfolio" class="btn btn-warning btn-lg">View Our Work</a>
+      <h2 class="hero-text display-4 fw-bold">Welcome to Kafan Digitals</h2>
+      <p class="hero-text lead">High-quality graphic design solutions for all your needs.</p>
+      <a href="#portfolio" class="btn btn-warning btn-lg shadow-lg">View Our Work</a>
     </div>
   </section>
 
   <section id="portfolio" class="py-5">
     <div class="container">
-      <h2 class="text-center">Our Portfolio</h2>
+      <h2 class="text-center mb-4">Our Portfolio</h2>
       <div class="row">
         <!-- Portfolio Images -->
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
-          <div class="card">
+          <div class="card shadow-sm">
             <img src="images/sardalast.png" class="card-img-top portfolio-img" alt="Design 1">
           </div>
         </div>
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1200">
-          <div class="card">
+          <div class="card shadow-sm">
             <img src="images/fiareceipt.png" class="card-img-top portfolio-img" alt="Design 2">
           </div>
         </div>
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1400">
-          <div class="card">
+          <div class="card shadow-sm">
             <img src="images/housse.png" class="card-img-top portfolio-img" alt="Design 3">
           </div>
         </div>
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1600">
-          <div class="card">
+          <div class="card shadow-sm">
             <img src="images/ZILLION.png" class="card-img-top portfolio-img" alt="Design 4">
           </div>
         </div>
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1800">
-          <div class="card">
+          <div class="card shadow-sm">
             <img src="images/FIA ACADEMYFORM.png" class="card-img-top portfolio-img" alt="Design 5">
           </div>
         </div>
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="2000">
-          <div class="card">
+          <div class="card shadow-sm">
             <img src="images/YABANYALOGO.png" class="card-img-top portfolio-img" alt="Design 6">
           </div>
         </div>
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="2200">
-          <div class="card">
+          <div class="card shadow-sm">
             <img src="images/kidaiv.png" class="card-img-top portfolio-img" alt="Design 7">
           </div>
         </div>
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="2400">
-          <div class="card">
+          <div class="card shadow-sm">
             <img src="images/formschool.png" class="card-img-top portfolio-img" alt="Design 8">
           </div>
         </div>
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="2600">
-          <div class="card">
+          <div class="card shadow-sm">
             <img src="images/COACH GLORY2.png" class="card-img-top portfolio-img" alt="Design 9">
           </div>
         </div>
-         <div class="col-md-4" data-aos="fade-up">
-  <div class="card">
-    <img src="images/mea.png" alt="Portfolio image 10" class="card-img-top portfolio-img">
-    <div class="card-body">
-      <h5 class="card-title">MEGA SALES FLYER</h5>
-      <p class="card-text">Mega Sale flyer design made very easily</p>
-    </div>
-  </div>
-</div>
-
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="card shadow-sm">
+            <img src="images/mea.png" alt="Portfolio image 10" class="card-img-top portfolio-img">
+            <div class="card-body">
+              <h5 class="card-title">MEGA SALES FLYER</h5>
+              <p class="card-text">Mega Sale flyer design made very easily</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="about" class="bg-light py-5">
     <div class="container">
-      <h2 class="text-center">About Kafan Digitals</h2>
+      <h2 class="text-center mb-4">About Kafan Digitals</h2>
       <p class="text-center mt-4">
-        At Kafan Digitals, we specialize in graphic design, including business flyers, logos, wedding invitations, POS flyers, school forms, and book covers. 
+        At Kafan Digitals, we specialize in graphic design, including business flyers, logos, wedding invitations, POS
+        flyers, school forms, and book covers.
         Our designs are tailored to meet your needs and make a lasting impression.
       </p>
       <!-- Progress bars -->
@@ -159,13 +172,13 @@
         <div class="col-md-6">
           <h5>Experience</h5>
           <div class="progress">
-            <div class="progress-bar" style="width: 80%;">80%</div>
+            <div class="progress-bar progress-bar-striped" style="width: 80%;">80%</div>
           </div>
         </div>
         <div class="col-md-6">
           <h5>Projects Completed</h5>
           <div class="progress">
-            <div class="progress-bar" style="width: 95%;">95%</div>
+            <div class="progress-bar progress-bar-striped" style="width: 95%;">95%</div>
           </div>
         </div>
       </div>
@@ -174,7 +187,7 @@
 
   <section id="contact" class="py-5">
     <div class="container">
-      <h2 class="text-center">Contact Us</h2>
+      <h2 class="text-center mb-4">Contact Us</h2>
       <p class="text-center">Email: <a href="mailto:kafan.digitals@gmail.com">kabirabbaalmustapha@gmail.com</a></p>
       <p class="text-center">Phone: +234 7039350100</p>
       <p class="text-center">Address: Abuja, Nigeria</p>
@@ -206,4 +219,5 @@
     }
   </script>
 </body>
+
 </html>
