@@ -1,143 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KAFAN Digitals - Professional Business and Social Media Designs">
-    <title>KAFAN Digitals</title>
-    <link rel="icon" href="images/logo.png" type="image/jpeg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="KAFAN Digitals - Professional Business and Social Media Designs" />
+  <title>KAFAN Digitals</title>
+  <link rel="icon" href="images/logo.png" type="image/jpeg" />
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-    <!-- Custom Styles -->
-    <style>
-        body { font-family: 'Poppins', sans-serif; color: #fff; background-color: #0a352c; margin: 0; }
-        .navbar { background-color: #ff8109; padding: 0.5rem 1rem; }
-        .navbar-brand { display: flex; align-items: center; gap: 0.5rem; }
-        .navbar-brand img { width: 50px; height: 50px; border-radius: 50%; }
-        .navbar a { color: #fff !important; }
-        .hero-section { text-align: center; padding: 5rem 2rem; background: linear-gradient(135deg, #0a352c, #ff8109); }
-        .hero-text h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .hero-text p { font-size: 1rem; margin-bottom: 1.5rem; }
-        .cta-button { background-color: #ff8109; color: #fff; padding: 0.7rem 1.5rem; border: none; border-radius: 5px; }
-        .social-links { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
-        .social-links a { color: #ff8109; font-size: 1.5rem; transition: color 0.3s; }
-        .social-links a:hover { color: #fff; }
-        .design-cards { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
-        .design-img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            object-position: center;
-            border-radius: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .design-img:hover { 
-            transform: scale(1.05); 
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
-        }
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
 
-        footer { text-align: center; padding: 1rem; background-color: #ff8109; }
-    </style>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background-color: #0a352c;
+      margin: 0;
+    }
+
+    .navbar {
+      background-color: #ff8109;
+      padding: 0.5rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .navbar-brand img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .navbar a {
+      color: #fff !important;
+    }
+
+    .hero-section {
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, #0a352c, #ff8109);
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+      background-color: #ff8109;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      color: #ff8109;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #fff;
+    }
+
+    .design-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .design-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .design-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #ff8109;
+    }
+
+    /* Scroll to Top Button */
+    #scrollTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 999;
+      font-size: 18px;
+      background-color: #ff8109;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 10px 15px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    #scrollTopBtn:hover {
+      background-color: #0a352c;
+    }
+  </style>
 </head>
 <body>
-    <header class="navbar navbar-expand-lg">
-        <nav class="container">
-            <a class="navbar-brand" href="#">
-                <img src="images/logo.png" alt="KAFAN Logo">
-                Kafan Digitals
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon text-white"><i class="fas fa-bars"></i></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#business">Business Design</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#social">Social Media Design</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+  <header class="navbar navbar-expand-lg">
+    <nav class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" alt="KAFAN Logo" />
+        Kafan Digitals
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon text-white"><i class="fas fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#business">Business Design</a></li>
+          <li class="nav-item"><a class="nav-link" href="#social">Social Media Design</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-    <section id="home" class="hero-section">
-        <div class="hero-text">
-            <h1>NEXT GEN <br> BUSINESS & SOCIAL MEDIA DESIGNS</h1>
-            <p>Unleash creativity with professional, modern, and brand-focused designs.</p>
-            <a href="#business" class="btn btn-light cta-button">Explore Now</a>
-        </div>
-    </section><br>
+  <section id="home" class="hero-section">
+    <div class="hero-text">
+      <h1>NEXT GEN <br /> BUSINESS & SOCIAL MEDIA DESIGNS</h1>
+      <p>Unleash creativity with professional, modern, and brand-focused designs.</p>
+      <a href="#business" class="btn btn-light cta-button">Explore Now</a>
+    </div>
+  </section><br>
 
-    <section id="business" class="design-section">
-        <h2 class="text-center">Business Design</h2> <br>
-        <div class="design-cards">
-            <img src="images/business/pasta.webp" alt="Business Design 1" class="design-img">
-            <img src="images/business/bin fussar.webp" alt="Business Design 2" class="design-img">
-            <img src="images/business/transfer.webp" alt="Business Design 3" class="design-img">
-            <img src="images/business/emeralld.webp" alt="Business Design 3" class="design-img">
-            <img src="images/business/amina.webp" alt="Business Design 3" class="design-img">
-            <img src="images/business/asb.webp" alt="Business Design 3" class="design-img">
-            <img src="images/business/atamfa.webp" alt="Business Design 3" class="design-img">
-            <img src="images/business/bazanba.webp" alt="Business Design 3" class="design-img">
-            <img src="images/business/Beli 2.webp" alt="Business Design 3" class="design-img">
-            <img src="images/business/dankama.webp" alt="Business Design 3" class="design-img">
-            <img src="images/business/exchange.webp" alt="Business Design 3" class="design-img">
-            <img src="images/business/FASHION.webp" alt="Business Design 3" class="design-img">
-            <img src="images/business/gas fee.webp" alt="Business Design 3" class="design-img">
-            <img src="images/business/maryam n.webp" alt="Business Design 3" class="design-img">
-        </div>
-    </section>
-<br> <br>
-    <section id="social" class="design-section">
-        <h2 class="text-center">Social Media Design</h2> <br>
-        <div class="design-cards">
-            <img src="images/social/Assunniy.webp" alt="Social Media Design 1" class="design-img">
-            <img src="images/social/fitra.webp" alt="Social Media Design 2" class="design-img">
-            <img src="images/social/weekend.webp" alt="Social Media Design 3" class="design-img">
-            <img src="images/social/ittisam.webp" alt="Social Media Design 3" class="design-img">
-            <img src="images/social/mal hassan.webp" alt="Social Media Design 3" class="design-img">
-            <img src="images/social/tiktok.webp" alt="Social Media Design 3" class="design-img">
-        </div>
-    </section><br>
+  <section id="business" class="design-section">
+    <h2 class="text-center">Business Design</h2><br>
+    <div class="design-cards">
+      <!-- Business images here -->
+      <!-- (images kept the same as you sent) -->
+      <img src="images/business/pasta.webp" class="design-img" />
+      <img src="images/business/bin fussar.webp" class="design-img" />
+      <img src="images/business/transfer.webp" class="design-img" />
+      <img src="images/business/emeralld.webp" class="design-img" />
+      <img src="images/business/amina.webp" class="design-img" />
+      <img src="images/business/asb.webp" class="design-img" />
+      <img src="images/business/atamfa.webp" class="design-img" />
+      <img src="images/business/bazanba.webp" class="design-img" />
+      <img src="images/business/Beli 2.webp" class="design-img" />
+      <img src="images/business/dankama.webp" class="design-img" />
+      <img src="images/business/exchange.webp" class="design-img" />
+      <img src="images/business/FASHION.webp" class="design-img" />
+      <img src="images/business/gas fee.webp" class="design-img" />
+      <img src="images/business/maryam n.webp" class="design-img" />
+    </div>
+  </section><br><br>
 
-    <section id="about" class="about-section">
-        <h2 class="text-center">About KAFAN Digitals</h2>
-        <p class="text-center">Specializing in graphic design, <br>
-            including business flyers, logos, 
-            and social media content. </p>
-     <section id="contact" class="contact-section">
-    <h2 class="text-center">Contact the CEO:</h2>
-    <p class="text-center">
+  <section id="social" class="design-section">
+    <h2 class="text-center">Social Media Design</h2><br>
+    <div class="design-cards">
+      <img src="images/social/Assunniy.webp" class="design-img" />
+      <img src="images/social/fitra.webp" class="design-img" />
+      <img src="images/social/weekend.webp" class="design-img" />
+      <img src="images/social/ittisam.webp" class="design-img" />
+      <img src="images/social/mal hassan.webp" class="design-img" />
+      <img src="images/social/tiktok.webp" class="design-img" />
+    </div>
+  </section><br>
+
+  <section id="about" class="about-section">
+    <h2 class="text-center">About KAFAN Digitals</h2>
+    <p class="text-center">Specializing in graphic design, <br>
+      including business flyers, logos, 
+      and social media content.
+    </p>
+    <section id="contact" class="contact-section">
+      <h2 class="text-center">Contact the CEO:</h2>
+      <p class="text-center">
         <strong style="color: #ff8109;">Name:</strong> Kabir Almustapha Fandirma <br>
         <strong style="color: #ff8109;">Phone:</strong> +2347039350100 <br>
         <strong style="color: #ff8109;">Email:</strong> kafaan1980@gmail.com <br>
         <strong style="color: #ff8109;">Address:</strong> Gwarinpa, Abuja
-    </p>
-</section>
+      </p>
+    </section>
+  </section>
 
-
-        </section></p> 
-<!-- Social Media Links Section -->
-<section class="text-center mt-4">
+  <section class="text-center mt-4">
     <h2>Follow Us</h2>
     <div class="social-links">
-        <a href="https://www.facebook.com/Khabeer.fandirmerh12" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/kafan_digitals?igsh=cTVjeDR0aWR4eWFp" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/Khabeer.fandirmerh12" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/kafan_digitals?igsh=cTVjeDR0aWR4eWFp" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
     </div>
-</section>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 KAFAN Digitals. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 KAFAN Digitals. All rights reserved.</p>
+  </footer>
 
-    <!-- Bootstrap JS (for navbar toggler) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Scroll to Top Button -->
+  <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    ScrollReveal().reveal('.design-section', {
+      duration: 1000,
+      origin: 'bottom',
+      distance: '50px',
+      delay: 200,
+      easing: 'ease-in-out',
+      reset: false
+    });
+
+    ScrollReveal().reveal('.design-img', {
+      interval: 100,
+      duration: 800,
+      origin: 'bottom',
+      distance: '20px'
+    });
+
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    };
+
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
