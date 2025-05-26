@@ -116,7 +116,6 @@
       background-color: #ff8109;
     }
 
-    /* Scroll to Top Button */
     #scrollTopBtn {
       display: none;
       position: fixed;
@@ -170,8 +169,6 @@
   <section id="business" class="design-section">
     <h2 class="text-center">Business Design</h2><br>
     <div class="design-cards">
-      <!-- Business images here -->
-      <!-- (images kept the same as you sent) -->
       <img src="images/business/pasta.webp" class="design-img" />
       <img src="images/business/bin fussar.webp" class="design-img" />
       <img src="images/business/transfer.webp" class="design-img" />
@@ -238,37 +235,26 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Scroll Animation Script -->
+  <!-- ScrollReveal Initialization -->
   <script>
-    ScrollReveal().reveal('.design-section', {
+    ScrollReveal().reveal('.hero-text, .design-section, .about-section, .contact-section, .social-links', {
       duration: 1000,
       origin: 'bottom',
       distance: '50px',
-      delay: 200,
+      delay: 100,
       easing: 'ease-in-out',
       reset: false
     });
 
-    ScrollReveal().reveal('.design-img', {
-      interval: 100,
-      duration: 800,
-      origin: 'bottom',
-      distance: '20px'
-    });
-
-    const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-    window.onscroll = function () {
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        scrollTopBtn.style.display = "block";
-      } else {
-        scrollTopBtn.style.display = "none";
-      }
+    // Scroll to top button logic
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = () => {
+      scrollBtn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
     };
-
     function topFunction() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
     }
   </script>
 </body>
-</html>
+        </html>
